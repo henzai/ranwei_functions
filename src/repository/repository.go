@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	COLLECTION_ITEM = "item"
+	COLLECTION_ITEM = "items"
 )
 
 func SetItem(ctx context.Context, p *model.Payload) error {
