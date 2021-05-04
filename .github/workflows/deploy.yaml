@@ -17,7 +17,6 @@ jobs:
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: SaveItem
-          entry_point: save_item
           runtime: go113
           credentials: ${{ secrets.GCP_CREDENTIALS }}
           env_vars: PROJECT_ID=${{ secrets.GCP_PROJECT_ID }}
