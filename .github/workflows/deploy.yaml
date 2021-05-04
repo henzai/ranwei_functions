@@ -1,0 +1,23 @@
+name: deploy_functions
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GCP_PROJECT: ${{ secrets.GCP_PROJECT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - id: deploy
+        uses: google-github-actions/deploy-cloud-functions@main
+        with:
+          name: SaveItem
+          entry_point: save_item
+          runtime: go113
+          credentials: ${{ secrets.GCP_CREDENTIALS }}
+          env_vars: PROJECT_ID=${{ secrets.GCP_PROJECT_ID }}
