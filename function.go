@@ -3,7 +3,7 @@ package functions
 import (
 	"net/http"
 
-	"github.com/henzai/ranwei_functions/src/handler"
+	"github.com/henzai/ranwei_functions/handler"
 )
 
 // SaveItem save attachment as item into firestore.

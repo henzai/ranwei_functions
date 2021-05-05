@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/henzai/ranwei_functions/src/handler"
+	"github.com/henzai/ranwei_functions/handler"
 )
 
 func main() {
